@@ -64,6 +64,8 @@ public class Player {
     public void prechodStartom(){
         this.pozicia=pozicia%24;
         this.peniaze+=500;
+        System.out.println("Presiel si startom!");
+        System.out.println("Tvoj aktualny financny stav: " + peniaze);
     }
 
     public Player() { }

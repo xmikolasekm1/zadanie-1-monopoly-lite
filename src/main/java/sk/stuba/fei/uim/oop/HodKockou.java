@@ -7,23 +7,15 @@ public class HodKockou {
     private int[] dice = new int[NUM_DICE];
 
 
-    public void hodkockou() {
+    public void hodkockou(int min,int max) {
         for (int i = 0; i < NUM_DICE; i++) {
-            this.dice[i] = 1 + (int) (Math.random() * 6);
+            this.dice[i] = min + (int) (Math.random() * (max-min+1));
         }
 
     }
 
     public int getDice () {
         return dice[0];
-    }
-
-    public int getTotal () {
-        return (dice[0] + dice[1]);
-    }
-
-    public boolean isDouble () {
-        return dice[0] == dice[1];
     }
 
     public String toString () {

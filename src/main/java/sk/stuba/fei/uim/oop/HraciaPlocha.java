@@ -34,14 +34,10 @@ public class HraciaPlocha {
     public HraciaPlocha() {
         this.hraciaPlochaPolicko.add(0, start);
         this.hraciaPlochaPolicko.add(1, nehnutelnost1);
-        this.budovy.add(0,nehnutelnost1);
         this.hraciaPlochaPolicko.add(2, nehnutelnost2);
-        this.budovy.add(1,nehnutelnost2);
         this.hraciaPlochaPolicko.add(3, sanca);
         this.hraciaPlochaPolicko.add(4, nehnutelnost3);
-        this.budovy.add(2,nehnutelnost3);
         this.hraciaPlochaPolicko.add(5, nehnutelnost4);
-        this.budovy.add(3,nehnutelnost4);
         this.hraciaPlochaPolicko.add(6, vazenie);
         this.hraciaPlochaPolicko.add(7, nehnutelnost5);
         this.hraciaPlochaPolicko.add(8, nehnutelnost6);

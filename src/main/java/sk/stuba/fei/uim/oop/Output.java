@@ -6,11 +6,9 @@ import java.util.Iterator;
 public class Output {
     private int x = 0;
     private int y = 0;
-    //private int stojisVoVazeni;
     private Player hrac = new Player();
     private HodKockou hod = new HodKockou();
     private Policko pozicia = new Policko();
-    protected ArrayList<Player> infoHraci = new ArrayList<>();
     private HraciaPlocha plocha = new HraciaPlocha();
     private Nehnutelnost budovy = new Nehnutelnost();
 
@@ -45,7 +43,7 @@ public class Output {
                         System.out.println("Pozicia hraca" + aktualnyHrac.getCisloHraca() + ": " + aktualnyHrac.getPozicia());
 
 
-                        hod.hodkockou();
+                        hod.hodkockou(1,6);
                         System.out.println("Hodil si:" + hod.getDice());
                         aktualnyHrac.novaPozicia(hod.getDice());
 
@@ -55,8 +53,6 @@ public class Output {
 
                         if (aktualnyHrac.getPozicia() >= 24 || aktualnyHrac.getPozicia() == 0) {
                             aktualnyHrac.prechodStartom();
-                            System.out.println("Presiel si startom! Tvoja nova pozicia je: " + aktualnyHrac.getPozicia());
-                            System.out.println("Tvoj aktualny financny stav: " + aktualnyHrac.getPeniaze());
                         }
 
                         this.pozicia = plocha.getAktualnePolicko(aktualnyHrac.getPozicia() - 1);
